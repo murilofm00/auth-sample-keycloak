@@ -14,6 +14,11 @@ namespace AuthSample
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowCredentials().WithHeaders("Authorization"));
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,6 +32,7 @@ namespace AuthSample
 
             app.UseAuthorization();
 
+            app.UseCors();
 
             app.MapControllers();
 

@@ -1,0 +1,8 @@
+@if(isLoggedIn) {
+<button (click)="logout()">Logout</button>
+<h2>Bem vindo {{ name }}!</h2>
+} @else {
+<button (click)="login()">Login</button>
+}
+
+<router-outlet></router-outlet>
