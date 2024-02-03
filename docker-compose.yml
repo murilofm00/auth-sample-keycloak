@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  authsample:
+    image: ${DOCKER_REGISTRY-}authsample
+    build:
+      context: .
+      dockerfile: AuthSample/Dockerfile
+    depends_on: 
+      - keycloak
+  
+  auth-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: teste
+    volumes:
+      - auth-db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      KC_DB: postgres
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: teste
+      KC_DB_URL_HOST: auth-db
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command:
+      [ "start-dev"]
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    depends_on:
+      - auth-db
+   
+volumes:
+  auth-db-data:
