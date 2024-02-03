@@ -1,6 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { KeycloakEventType, KeycloakService } from 'keycloak-angular';
-import { SampleApiService } from './sample-api.service';
+import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateUserInfo();
-    this.keycloakService.keycloakEvents$.subscribe(event => {
-        this.updateUserInfo();
+    this.keycloakService.keycloakEvents$.subscribe(() => {
+      this.updateUserInfo();
     });
   }
 
