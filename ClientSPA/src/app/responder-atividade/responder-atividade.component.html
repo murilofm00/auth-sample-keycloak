@@ -1,0 +1,19 @@
+<div class="border border-sky-500 rounded m-2 p-2">
+  <p>Atividade {{index}}</p>
+  <p>{{atividade.nome}}</p>
+
+  <button class="bg-sky-500 text-white my-2 p-1 rounded"
+          (click)="responderAvaliacao()" *ngIf="!responder">
+    Responder
+  </button>
+
+  @if(responder) {
+  <textarea class="block w-full border border-slate-300 rouded-md"
+            [(ngModel)]="resposta">
+  </textarea>
+  <button class="bg-sky-500 text-white my-2 p-1 rounded"
+          (click)="atualizarParticipacao()">
+    Salvar
+  </button>
+  }
+</div>

@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthSample", "AuthSample\AuthSample.csproj", "{AD4EF34F-C985-4A00-BC64-5AF1CBAA28B5}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{29C505B9-7526-42DC-BE63-C7BB09D7202C}"
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ClientSPA", "ClientSPA\ClientSPA.esproj", "{0EC287DD-8654-49B4-99B1-169C8280DCD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthSampleAPI", "AuthSampleAPI\AuthSampleAPI.csproj", "{F5EE88F5-2F88-4CE7-B161-8D4F31E7C7BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD4EF34F-C985-4A00-BC64-5AF1CBAA28B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD4EF34F-C985-4A00-BC64-5AF1CBAA28B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD4EF34F-C985-4A00-BC64-5AF1CBAA28B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD4EF34F-C985-4A00-BC64-5AF1CBAA28B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29C505B9-7526-42DC-BE63-C7BB09D7202C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29C505B9-7526-42DC-BE63-C7BB09D7202C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29C505B9-7526-42DC-BE63-C7BB09D7202C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29C505B9-7526-42DC-BE63-C7BB09D7202C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0EC287DD-8654-49B4-99B1-169C8280DCD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0EC287DD-8654-49B4-99B1-169C8280DCD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EC287DD-8654-49B4-99B1-169C8280DCD8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{0EC287DD-8654-49B4-99B1-169C8280DCD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EC287DD-8654-49B4-99B1-169C8280DCD8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0EC287DD-8654-49B4-99B1-169C8280DCD8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F5EE88F5-2F88-4CE7-B161-8D4F31E7C7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EE88F5-2F88-4CE7-B161-8D4F31E7C7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EE88F5-2F88-4CE7-B161-8D4F31E7C7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EE88F5-2F88-4CE7-B161-8D4F31E7C7BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

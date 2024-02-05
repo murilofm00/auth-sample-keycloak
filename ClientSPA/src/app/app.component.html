@@ -1,8 +1,10 @@
+<div class="p-4">
 @if(isLoggedIn) {
-<button (click)="logout()">Logout</button>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="logout()">Logout</button>
 <h2>Bem vindo {{ name }}!</h2>
 } @else {
-<button (click)="login()">Login</button>
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="login()">Login</button>
 }
+</div>
 
 <router-outlet></router-outlet>

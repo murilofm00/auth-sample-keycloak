@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { SampleApiService } from '../sample-api.service';
+import { Component, inject} from '@angular/core';
+import { KeycloakService } from 'keycloak-angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +7,7 @@ import { SampleApiService } from '../sample-api.service';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-  sampleApiService: SampleApiService = inject(SampleApiService)
+  keycloakService: KeycloakService = inject(KeycloakService)
 
-  getWeather() {
-    this.sampleApiService.getWeatherForecast().subscribe(result => console.log(result))
-  }
+  roles = this.keycloakService.getUserRoles()
 }

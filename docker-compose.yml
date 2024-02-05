@@ -1,14 +1,6 @@
-version: '3.4'
+version: "3.4"
 
 services:
-  authsample:
-    image: ${DOCKER_REGISTRY-}authsample
-    build:
-      context: .
-      dockerfile: AuthSample/Dockerfile
-    depends_on: 
-      - keycloak
-  
   auth-db:
     image: postgres
     restart: always
@@ -21,7 +13,7 @@ services:
       - "5432:5432"
 
   keycloak:
-    image: quay.io/keycloak/keycloak:latest
+    image: quay.io/keycloak/keycloak:23.0.6
     environment:
       KC_DB: postgres
       KC_DB_USERNAME: keycloak

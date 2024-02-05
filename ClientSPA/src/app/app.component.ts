@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   login(): void {
-    this.keycloakService.login();
+    this.keycloakService.login({redirectUri: '/dashboard'});
   }
 
 

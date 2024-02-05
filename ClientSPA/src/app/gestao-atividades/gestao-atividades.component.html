@@ -1,0 +1,4 @@
+
+@for (atividade of atividades; track atividade.id) {
+<app-controle-atividade [atividade]="atividade" (atividadeRemovida)="atividadeRemovida(atividade.id)"></app-controle-atividade>
+}

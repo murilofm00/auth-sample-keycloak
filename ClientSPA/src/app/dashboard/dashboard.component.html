@@ -1,3 +1,11 @@
-<p>dashboard works!</p>
 
-<button (click)="getWeather()">Get Weather</button>
+<div class="mx-2">
+  <h3>Atividades:</h3>
+
+  @if(roles.includes("STUDENT")) {
+  <app-responder-atividades></app-responder-atividades>
+  }
+  @if(roles.includes("PROFESSOR")) {
+  <app-gestao-atividades></app-gestao-atividades>
+  }
+</div>
